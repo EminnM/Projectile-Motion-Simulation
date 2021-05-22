@@ -19,7 +19,7 @@ y_list = []
 
 while y >= 0:
     x = v*np.cos(rad)*(t+ tf)
-    y = v*np.sin(rad)*(t+tf) - 1/2*g*(t+tf)**2
+    y = v*np.sin(rad)*(t+tf) - 1/2*g*(t+tf)**2 #these 2 equations are our motion equations
 
     x_list.append(x)
     y_list.append(y)
