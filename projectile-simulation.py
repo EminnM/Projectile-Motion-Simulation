@@ -36,8 +36,8 @@ fig, ax = plt.subplots(1, 1, figsize = (6, 6))
 def animate(i):
     ax.cla() # clear the previous image
     ax.plot(x_list[:i], y_list[:i]) # plot the line
-    ax.set_xlim([0,1000]) # fix the x axis
-    ax.set_ylim([0,500]) # fix the y axis
+    ax.set_xlim([0,max(x_list)*1.2]) # fix the x axis
+    ax.set_ylim([0,max(y_list)*1.1] # fix the y axis
 
 anim = animation.FuncAnimation(fig, animate, frames = len(x_list) + 1, interval = 1, blit = False)
 plt.show()
