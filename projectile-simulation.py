@@ -1,5 +1,8 @@
-v = 100 #by this line we set initial velocity to 100 m/s
 import numpy as np
+
+
+v = 100 #by this line we set initial velocity to 100 m/s
+
 alpha = 20 #by this line we set initial angle between ground to 45 degrees
 rad = alpha*np.pi/180 #we converted bcs numpy works with radians
 
@@ -24,20 +27,15 @@ while y >= 0:
     t = t + tf
 
 
-import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import animation
 
-x = x_list
-y = y_list
-
-# animation line plot example
 
 fig, ax = plt.subplots(1, 1, figsize = (6, 6))
 
 def animate(i):
     ax.cla() # clear the previous image
-    ax.plot(x[:i], y[:i]) # plot the line
+    ax.plot(x_list[:i], y_list[:i]) # plot the line
     ax.set_xlim([0,1000]) # fix the x axis
     ax.set_ylim([0,500]) # fix the y axis
 
